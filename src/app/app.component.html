@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-3">
+    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      <div class="nav-side-menu">
+        <div class="brand">wunderman-thompson-app</div>
+        <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+            <div class="menu-list">
+                <ul id="menu-content" class="menu-content collapse out">
+                    <li data-toggle="collapse" data-target="#categories" class="collapsed">
+                      <a ><i class="fa fa-globe fa-lg"></i> Usuarios <span class="arrow"></span></a>
+                    </li>  
+                    <ul class="sub-menu collapse" id="categories">
+                      <li>
+                        <a [routerLink]="['/createUserComponent']" class="nav-item">Crear Usuario</a>
+                      </li>
+                      <li>
+                        <a [routerLink]="['/userListComponent']">Usuario Consulta</a>
+                      </li>
+                    </ul>
+                </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-9">
+    <div class="tab-content" id="v-pills-tabContent">
+      <div class="container">
+        <br>
+        <h2 style="text-align: center;">{{title}}</h2>
+        <hr>  
+        <div class="card">
+          <div class="card-body">
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

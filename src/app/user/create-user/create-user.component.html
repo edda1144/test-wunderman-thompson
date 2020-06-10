@@ -1,0 +1,16 @@
+<div style="text-align:center">
+  <h1>Crear Usuario</h1>
+</div>
+<form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="title">Titulo</label>
+    <input type="text" class="form-control" id="title" 
+      required [(ngModel)]="user.title" name="title">
+
+    <label for="body">Cuerpo</label>
+    <input type="text" class="form-control" id="body" 
+      required [(ngModel)]="user.body" name="body">
+
+  </div>
+  <button type="submit" class="btn btn-success">Grabar</button>
+</form>
